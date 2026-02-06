@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Vault - Perfil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-card profile-card">
+            <div class="logo">
+                <h1><i class="fas fa-shield-alt"></i> The <span>Vault</span></h1>
+                <p>Perfil do usuário</p>
+            </div>
+            
+            <div class="profile-icon">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            
+            <div id="profileInfo">
+                <!-- Informações do perfil serão carregadas aqui -->
+            </div>
+            
+            <div class="security-info">
+                <p><i class="fas fa-check-circle"></i> Autenticado com JWT</p>
+                <p><i class="fas fa-check-circle"></i> Senha protegida com Argon2</p>
+                <p><i class="fas fa-check-circle"></i> Proteção contra brute force</p>
+            </div>
+            
+            <button id="logoutBtn" class="btn logout-btn">
+                <i class="fas fa-sign-out-alt"></i> Sair
+            </button>
+            
+            <div class="links">
+                <p><a href="index.html"><i class="fas fa-home"></i> Página inicial</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/auth.js"></script>
+</body>
+</html>

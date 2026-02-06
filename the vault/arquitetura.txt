@@ -1,0 +1,21 @@
+the vault/
+│
+├── backend/
+│   ├── main.py
+│   ├── auth.py
+│   ├── security.py
+│   ├── rate_limiter.py
+│   ├── models.py
+│   ├── database.py
+│   └── config.py
+│
+├── frontend/
+│   ├── index.html      
+│   ├── register.html   
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── auth.js
+│
+├── requirements.txt
+└── README.md

@@ -1,0 +1,16 @@
+# Framework
+fastapi==0.104.1
+uvicorn==0.24.0
+
+# Banco de Dados
+sqlalchemy==2.0.23
+alembic==1.12.1
+
+# Segurança
+python-jose[cryptography]==3.3.0
+passlib[argon2]==1.7.4
+
+# Utilitários
+pydantic==2.5.0
+pydantic-settings==2.1.0
+python-multipart==0.0.6

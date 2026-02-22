@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Créditos - Login</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card" style="max-width: 500px; margin: 50px auto;">
+            <h1 style="text-align: center;">Sistema de Créditos</h1>
+            
+            <div id="message" style="display: none;"></div>
+            
+            <div class="tab-container">
+                <div class="tab active" data-tab="login">Login</div>
+                <div class="tab" data-tab="register">Registrar</div>
+            </div>
+            
+            <!-- Login Tab -->
+            <div id="login-tab" class="tab-content active">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username">Usuário</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%;">Entrar</button>
+                </form>
+            </div>
+            
+            <!-- Register Tab -->
+            <div id="register-tab" class="tab-content">
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="reg-username">Usuário</label>
+                        <input type="text" id="reg-username" name="username" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reg-email">E-mail</label>
+                        <input type="email" id="reg-email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reg-password">Senha</label>
+                        <input type="password" id="reg-password" name="password" required minlength="6">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reg-confirm-password">Confirmar Senha</label>
+                        <input type="password" id="reg-confirm-password" name="confirm_password" required minlength="6">
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%;">Registrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

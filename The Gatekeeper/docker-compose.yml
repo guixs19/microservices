@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: sistema-creditos
+    ports:
+      - "8000:8000"
+    volumes:
+      # Montar código fonte para desenvolvimento com hot reload
+      - .:/app
+      # Volume persistente para o banco SQLite
+      - sqlite_data:/app/data
+    environment:
+      - DATABASE_URL=sqlite:///./data/creditos.db
+      - SECRET_KEY=your-secret-key-change-in-production
+      - ACCESS_TOKEN_EXPIRE_MINUTES=30
+    restart: unless-stopped
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+volumes:
+  sqlite_data:
+    name: sistema-creditos-data

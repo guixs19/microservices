@@ -1,0 +1,20 @@
+meu_projeto_creditos/
+├── app/
+│   ├── main.py              # Ponto de entrada da aplicação
+│   ├── database.py          # Configuração do SQLite (SQLAlchemy)
+│   ├── models.py            # Definição das tabelas do banco
+│   ├── schemas.py           # Validação de dados (Pydantic)
+│   ├── crud.py              # Lógica de banco (Create, Read, Update, Delete)
+│   ├── routes/              # Pastas para separar as rotas
+│   │   ├── users.py
+│   │   └── payments.py
+│   ├── static/              # Arquivos CSS e JS
+│   │   ├── css/
+│   │   │   └── style.css
+│   │   └── js/
+│   │       └── script.js
+│   └── templates/           # Arquivos HTML (Jinja2)
+│       ├── index.html
+│       └── dashboard.html
+├── requirements.txt         # Dependências do projeto
+└── creditos.db              # Banco de dados SQLite (gerado automaticamente)

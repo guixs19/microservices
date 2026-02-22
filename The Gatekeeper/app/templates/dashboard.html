@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Sistema de Créditos</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h1 style="color: white;">Dashboard</h1>
+            <div>
+                <button id="export-btn" class="btn" style="margin-right: 10px;">Exportar CSV</button>
+                <button id="logout-btn" class="btn btn-danger">Sair</button>
+            </div>
+        </div>
+        
+        <div id="message" style="display: none;"></div>
+        
+        <!-- Card de Saldo -->
+        <div class="balance-card">
+            <h2>Saldo Atual</h2>
+            <div class="balance-amount" id="balance">R$ 0,00</div>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <!-- Card de Pagamento -->
+            <div class="card">
+                <h2>Simular Pagamento</h2>
+                <form id="payment-form">
+                    <div class="form-group">
+                        <label for="payment-amount">Valor (R$)</label>
+                        <input type="number" id="payment-amount" name="amount" step="0.01" min="0.01" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="payment-description">Descrição</label>
+                        <input type="text" id="payment-description" name="description" placeholder="Ex: Compra online">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-danger">Pagar</button>
+                </form>
+            </div>
+            
+            <!-- Card de Recarga -->
+            <div class="card">
+                <h2>Recarregar Créditos</h2>
+                <form id="recharge-form">
+                    <div class="form-group">
+                        <label for="recharge-amount">Valor (R$)</label>
+                        <input type="number" id="recharge-amount" name="amount" step="0.01" min="0.01" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="recharge-description">Descrição</label>
+                        <input type="text" id="recharge-description" name="description" placeholder="Ex: Recarga via cartão">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-success">Recarregar</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Histórico de Transações -->
+        <div class="card">
+            <h2>Histórico de Transações</h2>
+            <div id="transaction-list" class="transaction-list">
+                <!-- Transações serão carregadas aqui via JavaScript -->
+            </div>
+        </div>
+        
+        <!-- Gráfico de Gastos -->
+        <div class="card">
+            <h2>Evolução de Gastos</h2>
+            <div class="chart-container">
+                <canvas id="spendingChart"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

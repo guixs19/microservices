@@ -1,42 +1,103 @@
-# 💳 Sistema de Gerenciamento de Créditos
+💳 Credit Management System
 
-Um sistema completo para gerenciamento de créditos com FastAPI, SQLite e Docker. O sistema garante que o saldo do usuário nunca fique negativo!
+A complete credit management system built with FastAPI, SQLite, and Docker. The platform ensures that user balances never become negative by validating transactions before processing.
 
-## ✨ Funcionalidades
+✨ Features
+🎯 Core Features
 
-### 🎯 Principais
-- ✅ **Saldo nunca negativo** - Sistema valida antes de cada débito
-- ✅ **Autenticação JWT** - Segurança com tokens
-- ✅ **Dashboard interativo** - Interface responsiva e moderna
-- ✅ **Histórico de transações** - Registro completo com timestamps
-- ✅ **Gráfico de gastos** - Visualização da evolução dos créditos
-- ✅ **Exportação CSV** - Relatórios das transações
+✅ Non-negative balance enforcement — The system validates credits before every debit operation
 
-### 🚀 Extras
-- Webhook simulado para pagamentos
-- Recarga de créditos
-- Feedback visual em tempo real
-- Atualização automática do saldo
+✅ JWT Authentication — Secure token-based authentication
 
-## 🛠️ Tecnologias
+✅ Interactive dashboard — Modern and responsive user interface
 
-- **Backend:** FastAPI, SQLAlchemy, Pydantic
-- **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
-- **Banco de Dados:** SQLite
-- **Autenticação:** JWT + Bcrypt
-- **Container:** Docker & Docker Compose
-- **Gráficos:** Chart.js
+✅ Transaction history — Full audit trail with timestamps
 
-## 📋 Pré-requisitos
+✅ Spending charts — Credit usage visualization over time
 
-- Docker e Docker Compose (recomendado)
-- OU Python 3.11+ e pip (para execução local)
+✅ CSV export — Transaction reporting and data export
 
-## 🚀 Instalação e Execução
+🚀 Additional Features
 
-### 🐳 Com Docker (Recomendado)
+Simulated payment webhook
 
-1. **Clone o repositório**
-```bash
-git clone https://github.com/seu-usuario/sistema-creditos.git
-cd sistema-creditos
+Credit recharge functionality
+
+Real-time visual feedback
+
+Automatic balance updates
+
+🛠️ Technologies
+
+Backend: FastAPI, SQLAlchemy, Pydantic
+
+Frontend: HTML5, CSS3, Vanilla JavaScript
+
+Database: SQLite
+
+Authentication: JWT + Bcrypt
+
+Containerization: Docker & Docker Compose
+
+Charts: Chart.js
+
+📋 Requirements
+
+Docker and Docker Compose (recommended)
+
+OR Python 3.11+ with pip (local execution)
+
+🚀 Installation and Setup
+🐳 Using Docker (Recommended)
+
+Clone the repository
+
+git clone https://github.com/your-username/credit-system.git
+cd credit-system
+🔐 Security
+
+The system uses JWT for stateless authentication and secure credential handling. Passwords are hashed before storage following industry best practices.
+
+🧠 Business Logic
+
+The application enforces strict business rules to maintain financial consistency:
+
+Users cannot spend more credits than available
+
+All debit operations are validated before execution
+
+Transaction history is recorded for auditing purposes
+
+Only authenticated users can access financial operations
+
+📈 Use Cases
+
+This type of system is commonly used in:
+
+SaaS platforms with usage-based billing
+
+API consumption models
+
+Internal credit systems
+
+Subscription and recharge services
+
+🎥 Demo
+
+A demonstration video showing the full workflow — authentication, credit operations, and dashboard interaction — is included in the repository.
+
+🚀 Future Improvements
+
+Potential enhancements include:
+
+Payment gateway integration
+
+Real payment webhooks
+
+Subscription plans
+
+Rate limiting based on credits
+
+Audit logging
+
+Cloud deployment

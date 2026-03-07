@@ -1,0 +1,94 @@
+{
+  "problem_type": "regression",
+  "best_model": "Lasso Regression",
+  "results": {
+    "Linear Regression": {
+      "metrics": {
+        "mse": 104.56159079977103,
+        "rmse": 10.225536210867919,
+        "mae": 8.737400307352727,
+        "r2": 0.07556871374831009,
+        "cv_mean": 0.11925485728284302,
+        "cv_std": 0.048365951496212006
+      },
+      "best_params": {},
+      "error": null
+    },
+    "Ridge Regression": {
+      "metrics": {
+        "mse": 104.58120587857502,
+        "rmse": 10.226495288151021,
+        "mae": 8.732837012041104,
+        "r2": 0.07539529641226905,
+        "cv_mean": 0.119459132128957,
+        "cv_std": 0.00023490675281840175
+      },
+      "best_params": {
+        "regressor__alpha": 10.0
+      },
+      "error": null
+    },
+    "Lasso Regression": {
+      "metrics": {
+        "mse": 104.56015919692035,
+        "rmse": 10.225466209269891,
+        "mae": 8.720307165988878,
+        "r2": 0.07558137058008274,
+        "cv_mean": 0.0748195286905624,
+        "cv_std": 0.06110742061516236
+      },
+      "best_params": {
+        "regressor__alpha": 0.1
+      },
+      "error": null
+    },
+    "Random Forest": {
+      "metrics": {
+        "mse": 110.53065153061767,
+        "rmse": 10.513355864357377,
+        "mae": 8.837859008057372,
+        "r2": 0.022796118697631984,
+        "cv_mean": 0.06658284503881078,
+        "cv_std": 0.007733314881487067
+      },
+      "best_params": {
+        "regressor__max_depth": 10,
+        "regressor__min_samples_split": 2,
+        "regressor__n_estimators": 200
+      },
+      "error": null
+    },
+    "Gradient Boosting": {
+      "metrics": {
+        "mse": 106.68122309735179,
+        "rmse": 10.328660276016043,
+        "mae": 8.780071216953187,
+        "r2": 0.05682899875118985,
+        "cv_mean": 0.043111378429268946,
+        "cv_std": 0.0442766007628351
+      },
+      "best_params": {
+        "regressor__learning_rate": 0.01,
+        "regressor__max_depth": 3,
+        "regressor__n_estimators": 100
+      },
+      "error": null
+    },
+    "SVR": {
+      "metrics": {
+        "mse": 105.45074647421521,
+        "rmse": 10.268921388062877,
+        "mae": 8.768020074317022,
+        "r2": 0.06770766919535909,
+        "cv_mean": 0.06814992798385489,
+        "cv_std": 0.056364230048769164
+      },
+      "best_params": {
+        "regressor__C": 1.0,
+        "regressor__gamma": "scale",
+        "regressor__kernel": "linear"
+      },
+      "error": null
+    }
+  }
+}

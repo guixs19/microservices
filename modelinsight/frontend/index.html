@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModelInsight - Upload de Dados</title>
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>ModelInsight</h1>
+            <p>Upload seu CSV e deixe a mágica acontecer</p>
+        </header>
+        
+        <div class="upload-container">
+            <!-- Área de Upload -->
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <div class="upload-text">
+                    Arraste seu arquivo CSV aqui ou clique para selecionar
+                </div>
+                <div class="upload-hint">
+                    Suporta apenas arquivos .CSV
+                </div>
+                <input type="file" id="fileInput" accept=".csv" hidden>
+            </div>
+            
+            <!-- Info do Arquivo -->
+            <div class="file-info" id="fileInfo">
+                <i class="fas fa-file-csv"></i>
+                <span class="file-name" id="fileName"></span>
+                <span>selecionado com sucesso!</span>
+            </div>
+            
+            <!-- Formulário de Configuração -->
+            <div class="config-form" id="configForm">
+                <div class="form-group">
+                    <label for="columnSelect">
+                        <i class="fas fa-bullseye"></i>
+                        Coluna Alvo (o que quer prever?)
+                    </label>
+                    <select id="columnSelect" required>
+                        <option value="">Selecione a coluna alvo</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="problemType">
+                        <i class="fas fa-cogs"></i>
+                        Tipo de Problema
+                    </label>
+                    <select id="problemType" required>
+                        <option value="regression">Regressão (prever números)</option>
+                        <option value="classification">Classificação (prever categorias)</option>
+                    </select>
+                </div>
+                
+                <button class="btn" id="trainBtn">
+                    <i class="fas fa-brain"></i>
+                    Treinar Modelos
+                </button>
+            </div>
+            
+            <!-- Loading -->
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <h3>Processando seus dados</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p id="statusMessage">Iniciando upload...</p>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>ModelInsight &copy; 2024 - Machine Learning para todos</p>
+        </footer>
+    </div>
+    
+    <!-- GSAP para animações -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <!-- JavaScript -->
+    <script src="js/api.js"></script>
+    <script src="js/upload.js"></script>
+</body>
+</html>

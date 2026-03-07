@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModelInsight - Dashboard</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Dashboard Comparativo</h1>
+            <p>Job ID: <span id="jobId"></span></p>
+        </header>
+        
+        <!-- Loading -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <h3>Carregando resultados...</h3>
+        </div>
+        
+        <!-- Conteúdo do Dashboard -->
+        <div class="dashboard-content">
+            <!-- Header do Dashboard -->
+            <div class="dashboard-header">
+                <h2>Resultados do Treinamento</h2>
+                <div class="model-selector" id="modelBtns">
+                    <!-- Botões serão inseridos via JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Cards de Métricas -->
+            <div class="metrics-grid" id="metricsGrid">
+                <!-- Cards serão inseridos via JavaScript -->
+            </div>
+            
+            <!-- Dashboards Lado a Lado -->
+            <div class="dashboards-container">
+                <!-- Dados Reais -->
+                <div class="dashboard-panel">
+                    <h3>
+                        <i class="fas fa-chart-line"></i>
+                        Dados Reais
+                    </h3>
+                    <div class="chart-container">
+                        <canvas id="chartReal"></canvas>
+                    </div>
+                </div>
+                
+                <!-- Previsões do Modelo -->
+                <div class="dashboard-panel">
+                    <h3>
+                        <i class="fas fa-robot"></i>
+                        Previsões do Modelo
+                    </h3>
+                    <div class="chart-container">
+                        <canvas id="chartPredicted"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tabela Comparativa -->
+            <div class="data-table-container">
+                <h3>
+                    <i class="fas fa-table"></i>
+                    Comparação (Primeiras 20 linhas)
+                </h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Valor Real</th>
+                            <th>Valor Previsto</th>
+                            <th>Erro (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataTableBody">
+                        <!-- Dados serão inseridos via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>ModelInsight &copy; 2024 - Comparação em tempo real</p>
+        </footer>
+    </div>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <!-- JavaScript -->
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

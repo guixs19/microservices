@@ -1,0 +1,177 @@
+O ModelInsight será um microserviço de análise de dados e Machine Learning que permite ao usuário enviar uma planilha, treinar automaticamente modelos de ML e visualizar os resultados em um dashboard comparativo interativo.
+
+O sistema processará os dados, aplicará algoritmos de aprendizado de máquina, avaliará os modelos com métricas estatísticas e mostrará comparação entre dados reais e previsões do modelo.
+
+Objetivo do sistema
+
+O projeto permitirá que o usuário:
+
+Envie um arquivo CSV com dados.
+
+O sistema processe e prepare os dados.
+
+Treine vários modelos de Machine Learning.
+
+Use validação cruzada para avaliar os modelos.
+
+Otimize parâmetros automaticamente.
+
+Gere previsões e métricas estatísticas.
+
+Exiba tudo em dois dashboards comparativos.
+
+Tecnologias utilizadas
+Backend
+
+API responsável por processamento de dados e treinamento de modelos.
+
+Framework principal:
+
+FastAPI
+
+Bibliotecas de análise de dados:
+
+pandas
+
+NumPy
+
+Biblioteca de Machine Learning:
+
+scikit-learn
+
+Algoritmos de Machine Learning
+
+O sistema poderá usar modelos como:
+
+Linear Regression
+
+Random Forest
+
+Support Vector Machine
+
+Logistic Regression
+
+Naive Bayes
+
+Gradient Boosting
+
+Técnicas de avaliação do modelo
+
+Para garantir qualidade dos modelos, o sistema utilizará:
+
+K-Fold Cross-Validation
+
+GridSearchCV
+
+Métricas utilizadas:
+
+Mean Squared Error
+
+Confusion Matrix
+
+Recall
+
+Frontend
+
+Interface responsável pela visualização dos resultados.
+
+Tecnologias:
+
+HTML
+
+CSS
+
+JavaScript
+
+Bibliotecas visuais:
+
+GSAP (animações)
+
+Chart.js (gráficos)
+
+O frontend exibirá dois dashboards comparativos lado a lado:
+
+dados reais
+
+previsão do modelo
+
+Infraestrutura
+
+O projeto será containerizado com:
+
+Docker
+
+Isso permitirá:
+
+execução padronizada
+
+deploy mais fácil
+
+ambiente isolado
+
+
+
+
+
+
+modelinsight/
+│
+├── backend/
+│   │
+│   ├── app/
+│   │   ├── main.py
+│   │   │
+│   │   ├── api/
+│   │   │   ├── routes_upload.py
+│   │   │   ├── routes_predict.py
+│   │   │   └── routes_metrics.py
+│   │   │
+│   │   ├── services/
+│   │   │   ├── csv_service.py
+│   │   │   ├── model_service.py
+│   │   │   └── prediction_service.py
+│   │   │
+│   │   ├── ml/
+│   │   │   ├── train_model.py
+│   │   │   ├── predict.py
+│   │   │   └── metrics.py
+│   │   │
+│   │   ├── schemas/
+│   │   │   └── data_schema.py
+│   │   │
+│   │   └── utils/
+│   │       └── file_handler.py
+│   │
+│   └── requirements.txt
+│
+├── frontend/
+│   │
+│   ├── index.html
+│   ├── dashboard.html
+│   │
+│   ├── css/
+│   │   └── styles.css
+│   │
+│   └── js/
+│       ├── upload.js
+│       ├── dashboard.js
+│       └── api.js
+│
+├── data/
+│   ├── uploads/
+│   └── processed/
+│
+├── models/
+│   └── trained_model.pkl
+│
+└── README.md
+1 Upload de CSV
+2 Limpeza e preparação de dados
+3 Feature scaling
+4 Divisão treino/teste
+5 Validação cruzada (K-Fold)
+6 Otimização com GridSearch
+7 Treinamento do modelo
+8 Geração de previsões
+9 Cálculo de métricas
+10 Envio de resultados para o dashboard
